@@ -58,3 +58,6 @@ Le projet est développé sous forme de **monorepo** avec un frontend moderne en
 cd frontend
 npm install
 npm run dev
+
+### Backend
+symfony server:start or  symfony server:start --port=8080
