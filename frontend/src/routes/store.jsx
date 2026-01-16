@@ -5,88 +5,87 @@ export const Route = createFileRoute('/store')({
 })
 
 function RouteComponent() {
-  return <div>
-    
-    <h1 className='font-bold text-2xl justify-center items-center text-center text-white bg-green-900 p-4'>Damba Sv Freiburg Store
-      <span><i class="ri-shopping-bag-4-line"></i></span>
-    </h1>
-    <div className='flex flex-row gap-4 p-6 m-4 justify-center items-center'>
+  const products = [
+    {
+      id: 1,
+      name: 'SAC DE SPORT',
+      price: '30$',
+      image: 'https://res.cloudinary.com/dc4gctzct/image/upload/v1768476124/envato-labs-image-edit_4_1_vapuhe.png',
+      alt: 'sac de sport'
+    },
+    {
+      id: 2,
+      name: 'Jogging',
+      price: '50$',
+      image: 'https://res.cloudinary.com/dc4gctzct/image/upload/v1768474199/envato-labs-image-edit_5_g6u2yu.png',
+      alt: 'jogging pour football'
+    },
+    {
+      id: 3,
+      name: 'Tasse perso',
+      price: '15$',
+      image: 'https://res.cloudinary.com/dc4gctzct/image/upload/v1768474198/envato-labs-image-edit_6_vhfn36.png',
+      alt: 'tasse personnalisée'
+    }
+  ];
 
-    <div className='w-100 h-125 bg-white  rounded-lg shadow-2xl transition-transform ease-out duration-300 hover:-translate-y-4'>
-    <img
-    src="https://res.cloudinary.com/dc4gctzct/image/upload/v1768476124/envato-labs-image-edit_4_1_vapuhe.png"
-    alt="this is a bag image"
-    className=''
-    />
-    <p className='justify-center items-center text-center font-bold p-4 text-2xl'>SAC DE SPORT</p>
-    <p className='justify-center items-center text-center p-2 font-bold text-2xl'> 30$</p>
-    <button
-      type="submit"
-      className="
-        m-2 ml-17  w-64 py-3
-        rounded-xl
-        bg-green-700 text-white font-bold text-lg
-        transition-all duration-300
-        hover:bg-green-800 hover:scale-[1.02]
-        active:scale-95
-      "
-    >
-      Acheter
-    </button>
+  return (
+    <div className='w-full'>
+      {/* HEADER */}
+      <h1 className='font-bold text-2xl sm:text-3xl md:text-4xl text-center text-white bg-green-900 p-4 sm:p-6 md:p-8 flex items-center justify-center gap-3'>
+        Damba Sv Freiburg Store
+        <span><i className="ri-shopping-bag-4-line text-2xl sm:text-3xl md:text-4xl"></i></span>
+      </h1>
 
+      {/* PRODUCTS GRID */}
+      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 p-4 sm:p-6 md:p-8 lg:p-10 max-w-7xl mx-auto'>
+
+        {/* PRODUCT CARD */}
+        {products.map((product) => (
+          <div 
+            key={product.id}
+            className='bg-white rounded-lg shadow-2xl overflow-hidden transition-transform ease-out duration-300 hover:-translate-y-4'
+          >
+            {/* IMAGE CONTAINER */}
+            <div className='w-full h-48 sm:h-56 md:h-64 overflow-hidden bg-gray-100'>
+              <img
+                src={product.image}
+                alt={product.alt}
+                className='w-full h-full object-contain'
+              />
+            </div>
+
+            {/* PRODUCT INFO */}
+            <div className='p-4 sm:p-6 flex flex-col gap-3'>
+              <p className='font-bold text-center text-lg sm:text-xl md:text-2xl text-gray-800'>
+                {product.name}
+              </p>
+              <p className='font-bold text-center text-xl sm:text-2xl md:text-3xl text-green-700'>
+                {product.price}
+              </p>
+
+              {/* BUTTON */}
+              <button
+                type="button"
+                className="
+                  w-full py-2 sm:py-3 md:py-4 px-4
+                  rounded-xl
+                  bg-green-700 text-white font-bold text-sm sm:text-base md:text-lg
+                  transition-all duration-300
+                  hover:bg-green-800 hover:scale-[1.02]
+                  active:scale-95
+                  mt-2
+                "
+              >
+                Acheter
+              </button>
+            </div>
+          </div>
+        ))}
+
+      </div>
     </div>
-
-    <div className='w-100 h-125 bg-white  rounded-lg shadow-2xl transition-transform ease-out duration-300 hover:-translate-y-4'>
-       <img
-    src="https://res.cloudinary.com/dc4gctzct/image/upload/v1768474199/envato-labs-image-edit_5_g6u2yu.png"
-    alt="this is a men fit for football"
-    className='w-80 h-80 object-cover'
-    />
-    <p className='justify-center items-center text-center font-bold p-4 text-2xl'>Jogging</p>
-    <p className='justify-center items-center text-center p-2 font-bold text-2xl'> 50$</p>
-    <button
-      type="submit"
-      className="
-        m-2 ml-17  w-64 py-3
-        rounded-xl
-        bg-green-700 text-white font-bold text-lg
-        transition-all duration-300
-        hover:bg-green-800 hover:scale-[1.02]
-        active:scale-95
-      "
-    >
-      Acheter
-    </button>
-
-    </div>
-
-    <div className='w-100 h-125 bg-white  rounded-lg shadow-2xl transition-transform ease-out duration-300 hover:-translate-y-4'>
-       <img
-    src="https://res.cloudinary.com/dc4gctzct/image/upload/v1768474198/envato-labs-image-edit_6_vhfn36.png"
-    alt="this is a men fit for football"
-    className='m-7'
-    />
-
-    <p className='justify-center items-center text-center font-bold p-4 text-2xl'>Tasse perso</p>
-    <p className='justify-center items-center text-center p-2 font-bold text-2xl'> 15$</p>
-    <button
-      type="submit"
-      className="
-        m-2 ml-17  w-64 py-3
-        rounded-xl
-        bg-green-700 text-white font-bold text-lg
-        transition-all duration-300
-        hover:bg-green-800 hover:scale-[1.02]
-        active:scale-95
-      "
-    >
-      Acheter
-    </button>
-
-      
-    </div>
-
-
-    </div>
-    </div>
+  );
 }
+
+export default RouteComponent;
