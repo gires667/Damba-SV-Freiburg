@@ -48,6 +48,16 @@ function RegistrationForm() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 p-8 max-w-md mx-auto bg-green-400 m-8 items-center justify-center rounded-2xl shadow-2xl">
+
+      <div>
+        <label className="block font-medium">Type de membre</label>
+        <select {...register("type")} className="bg-white rounded-lg p-2 w-full">
+          <option value="supporter">Supporter</option>
+          <option value="sponsor">Sponsor</option>
+          <option value="joueur">Joueur</option>
+        </select>
+      </div>
+
       <div>
         <label className="block font-medium">Nom</label>
         <input {...register("nom")} className="p-2 w-full rounded-lg bg-white" required />
@@ -66,15 +76,6 @@ function RegistrationForm() {
       <div>
         <label className="block font-medium">Portable</label>
         <input {...register("phoneNumber")} className="p-2 w-full rounded-lg bg-white" required />
-      </div>
-
-      <div>
-        <label className="block font-medium">Type</label>
-        <select {...register("type")} className="bg-white rounded-lg p-2 w-full">
-          <option value="supporter">Supporter</option>
-          <option value="sponsor">Sponsor</option>
-          <option value="joueur">Joueur</option>
-        </select>
       </div>
 
       {watchType === "joueur" && (

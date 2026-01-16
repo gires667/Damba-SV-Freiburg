@@ -32,7 +32,7 @@ function RouteComponent() {
   return (
     <div className='w-full'>
       {/* HEADER */}
-      <h1 className='font-bold text-2xl sm:text-3xl md:text-4xl text-center text-white bg-green-900 p-4 sm:p-6 md:p-8 flex items-center justify-center gap-3'>
+      <h1 className='font-bold text-2xl sm:text-3xl md:text-4xl text-center text-white bg-green-900 p-2 sm:p-3 md:p-4 flex items-center justify-center gap-3'>
         Damba Sv Freiburg Store
         <span><i className="ri-shopping-bag-4-line text-2xl sm:text-3xl md:text-4xl"></i></span>
       </h1>

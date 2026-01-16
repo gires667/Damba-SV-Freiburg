@@ -30,7 +30,7 @@ function RouteComponent() {
   return (
     <div className='w-full'>
       {/* HEADER */}
-      <h1 className='text-2xl sm:text-3xl md:text-4xl text-center bg-green-900 p-4 sm:p-6 md:p-8 text-white font-bold'>
+      <h1 className='text-2xl sm:text-3xl md:text-4xl text-center bg-green-900 p-2 sm:p-3 md:p-4 text-white font-bold'>
         Infos du club
       </h1>
 
@@ -56,7 +56,7 @@ function RouteComponent() {
 
       {/* ACTUALITÉS TITLE */}
       <p className='px-4 sm:px-6 md:px-8 lg:px-10 text-2xl sm:text-3xl md:text-4xl font-bold text-green-500 mb-6 sm:mb-8'>
-        Actualités Damba SV
+        Actualités Damba SV Freiburg
       </p>
 
       {/* NEWS GRID */}

@@ -21,7 +21,7 @@ function Index() {
 
           <div className="absolute inset-0 bg-black/40"></div>
           <div className='absolute inset-0 flex flex-col justify-center items-center text-center text-white px-4 sm:px-6 gap-6'>
-            <p className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold'>The pitch is ours</p>
+            <p className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold'>Spass eu habben</p>
 
             <Link
               to="/register"
@@ -37,13 +37,15 @@ function Index() {
       <div className="flex flex-col md:flex-row items-stretch bg-white rounded-lg shadow-lg overflow-hidden mx-4 sm:mx-6 md:mx-8 lg:mx-12 my-8 sm:my-10 md:my-12">
 
         <div className="w-full md:w-1/2 p-6 sm:p-8 md:p-10 lg:p-12 flex flex-col justify-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">Damba sv frieburg</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">Damba SV Frieburg</h2>
           <p className="text-sm sm:text-base md:text-base text-gray-700 mb-6 sm:mb-8 leading-relaxed">
             Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié.
           </p>
-          <button className="px-6 py-3 sm:py-4 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors text-sm sm:text-base font-semibold w-fit">
+          <Link 
+          to="/store"
+          className="px-6 py-3 sm:py-4 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors text-sm sm:text-base font-semibold w-fit">
             Devenir membre
-          </button>
+          </Link>
         </div>
 
         <div className='w-full md:w-1/2 h-64 sm:h-80 md:h-auto overflow-hidden'>

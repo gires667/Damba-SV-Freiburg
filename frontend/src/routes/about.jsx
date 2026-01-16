@@ -23,7 +23,7 @@ function RouteComponent() {
   return (
     <div className='w-full'>
       {/* TITLE */}
-      <h1 className='text-center font-bold text-green-500 text-2xl sm:text-3xl md:text-4xl p-4 sm:p-6 bg-white rounded-lg sm:rounded-xl m-2 sm:m-4 md:m-6 shadow-2xl mx-auto max-w-fit'>
+      <h1 className='text-center font-bold text-green-500 text-2xl sm:text-2xl md:text-2xl p-2 sm:p-6 bg-white rounded-lg sm:rounded-xl m-2 sm:m-2 md:m-4 shadow-2xl mx-auto max-w-fit'>
         Damba SV Freiburg
       </h1>
 
@@ -58,7 +58,7 @@ function RouteComponent() {
               ou sponsoriser l'équipe, c'est participer à un projet humain qui 
               rassemble et redonne de l'espoir
             </p>
-            
+
           </div>
         </div>
       </div>

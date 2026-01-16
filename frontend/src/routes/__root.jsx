@@ -12,7 +12,7 @@ const RootLayout = () => {
     { label: 'Acceuil', icon: 'ri-home-4-line', href: '/' },
     { label: 'Team', icon: 'ri-team-fill', href: '/about' },
     { label: 'Boutiques', icon: 'ri-shopping-bag-4-line', href: '/store' },
-    { label: 'Infos', icon: 'ri-newspaper-fill', href: '/news' }
+    { label: 'Infos', icon: 'ri-newspaper-fill', href: '/news' },
   ];
 
   return (
@@ -24,12 +24,20 @@ const RootLayout = () => {
 
             {/* LOGO + TITLE */}
             <div className="flex items-center gap-2 md:gap-3">
+              <Link
+              to="/">
               <img
                 src="https://res.cloudinary.com/dc4gctzct/image/upload/v1768474199/envato-labs-image-edit_3_hcp19q.png"
                 alt="App logo"
                 className="h-12 md:h-16 w-12 md:w-16 object-contain hover:cursor-pointer"
               />
-              <p className='font-bold text-sm md:text-xl'>Damba SV freiburg</p>
+              </Link>
+              <p className='font-bold text-sm md:text-xl'>Damba SV Freiburg e.V.</p>
+              <Link
+              to="/register"
+              className='bg-green-500 rounded-2xl shadow-lg p-2 m-2'
+              >Devenir membre
+              </Link>
             </div>
 
             {/* DESKTOP MENU */}
@@ -38,7 +46,7 @@ const RootLayout = () => {
                 <Link
                   key={link.href}
                   to={link.href}
-                  className="px-4 py-2 rounded-xl hover:bg-white/20 transition-all [&.active]:font-bold [&.active]:bg-white/30 flex items-center gap-2"
+                  className="px-4 py-2 text-xl rounded-xl hover:bg-white/20 transition-all [&.active]:font-bold [&.active]:bg-white/30 flex items-center gap-2"
                 >
                   {link.label}
                   <span><i className={link.icon}></i></span>
@@ -91,7 +99,7 @@ const RootLayout = () => {
               className='w-24 md:w-40 h-24 md:h-40 object-contain'
             />
             <div className='text-white text-center md:text-left'>
-              <p className='font-bold text-lg md:text-xl'>Damba sv freiburg</p>
+              <p className='font-bold text-lg md:text-xl'>Damba SV Freiburg</p>
               <p className='text-sm md:text-base'>Allemagne</p>
               <p className='text-sm md:text-base'>Freiburg</p>
               <p className='text-sm md:text-base'>Adresse.....</p>
@@ -114,13 +122,13 @@ const RootLayout = () => {
 
           {/* FOOTER SECTION 3 - TAGLINE */}
           <div className='flex flex-col justify-center text-center md:text-right flex-1'> 
-            <p className='text-2xl md:text-3xl text-white font-bold hover:bg-white/20 transition-all py-2 px-4 rounded'>every where you go the pitch is ours</p>
+            <p className='text-2xl md:text-3xl text-white font-bold hover:bg-white/20 transition-all py-2 px-4 rounded'>spass eu haben</p>
           </div>
         </footer>
 
         {/* COPYRIGHT */}
         <div className='bg-green-900 w-full p-3 md:p-4'> 
-          <p className='text-white text-xs md:text-sm text-center'>© copyright Damba sv freiburg 2026. Tous droits réservés. Aucune partie de ce site ne peut être reproduite sans notre autorisation écrite.</p>
+          <p className='text-white text-xs md:text-sm text-center'>© copyright Damba SV Freiburg e.V. 2026. Tous droits réservés. Aucune partie de ce site ne peut être reproduite sans notre autorisation écrite.</p>
         </div>
       </div>
 
