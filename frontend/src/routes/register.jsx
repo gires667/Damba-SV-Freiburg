@@ -19,7 +19,7 @@ function RouteComponent() {
 
 function RegistrationForm() {
   const { register, handleSubmit, watch } = useForm({
-    defaultValues: { type: "supporter" }
+    defaultValues: { type: "choisir" }
   });
 
   const watchType = watch("type");
@@ -52,6 +52,7 @@ function RegistrationForm() {
       <div>
         <label className="block font-medium">Type de membre</label>
         <select {...register("type")} className="bg-white rounded-lg p-2 w-full">
+         * <option value="choisir">__choisir__</option> 
           <option value="supporter">Supporter</option>
           <option value="sponsor">Sponsor</option>
           <option value="joueur">Joueur</option>

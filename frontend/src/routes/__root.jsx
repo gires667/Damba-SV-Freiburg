@@ -35,7 +35,7 @@ const RootLayout = () => {
               <p className='font-bold text-sm md:text-xl'>Damba SV Freiburg e.V.</p>
               <Link
               to="/register"
-              className='bg-green-500 rounded-2xl shadow-lg p-2 m-2'
+              className='bg-white text-green-400 rounded-2xl shadow-lg p-2 m-2'
               >Devenir membre
               </Link>
             </div>
