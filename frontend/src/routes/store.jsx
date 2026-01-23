@@ -1,4 +1,4 @@
-import { createFileRoute } from '@tanstack/react-router'
+import { createFileRoute, Link } from '@tanstack/react-router'
 
 export const Route = createFileRoute('/store')({
   component: RouteComponent,
@@ -11,28 +11,31 @@ function RouteComponent() {
       name: 'SAC DE SPORT',
       price: '30$',
       image: 'https://res.cloudinary.com/dc4gctzct/image/upload/v1768476124/envato-labs-image-edit_4_1_vapuhe.png',
-      alt: 'sac de sport'
+      alt: 'sac de sport',
+      route: '/sac'
     },
     {
       id: 2,
       name: 'Jogging',
       price: '50$',
       image: 'https://res.cloudinary.com/dc4gctzct/image/upload/v1768474199/envato-labs-image-edit_5_g6u2yu.png',
-      alt: 'jogging pour football'
+      alt: 'jogging pour football',
+      route: '/fit'
     },
     {
       id: 3,
       name: 'Tasse perso',
       price: '15$',
       image: 'https://res.cloudinary.com/dc4gctzct/image/upload/v1768474198/envato-labs-image-edit_6_vhfn36.png',
-      alt: 'tasse personnalisée'
+      alt: 'tasse personnalisée',
+      route: '/tasse'
     }
   ];
 
   return (
     <div className='w-full'>
       {/* HEADER */}
-      <h1 className='font-bold text-2xl sm:text-3xl md:text-4xl text-center text-white bg-green-900 p-2 sm:p-3 md:p-4 flex items-center justify-center gap-3'>
+      <h1 className='font-bold text-2xl sm:text-3xl md:text-4xl text-center text-white bg-green-900 p-2 sm:p-3 md:p-4 flex items-center justify-center gap-3 lg:mx-12'>
         Damba Sv Freiburg Store
         <span><i className="ri-shopping-bag-4-line text-2xl sm:text-3xl md:text-4xl"></i></span>
       </h1>
@@ -65,8 +68,8 @@ function RouteComponent() {
               </p>
 
               {/* BUTTON */}
-              <button
-                type="button"
+              <Link
+                to={product.route}
                 className="
                   w-full py-2 sm:py-3 md:py-4 px-4
                   rounded-xl
@@ -75,10 +78,11 @@ function RouteComponent() {
                   hover:bg-green-800 hover:scale-[1.02]
                   active:scale-95
                   mt-2
+                  block text-center
                 "
               >
                 Acheter
-              </button>
+              </Link>
             </div>
           </div>
         ))}

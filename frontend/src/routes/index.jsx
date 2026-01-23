@@ -6,22 +6,23 @@ export const Route = createFileRoute('/')({
   component: Index,
 })
 
+
 function Index() {
   return (
     <main className="w-full overflow-x-hidden">
 
       {/* HERO SECTION */}
       <section className="w-full">
-        <div className='relative w-full h-64 sm:h-80 md:h-96 lg:h-[30rem]'>
+        <div className='relative lg:mx-12 lg:h-80 mx-4'>
           <img
             src="https://res.cloudinary.com/dc4gctzct/image/upload/v1768476431/soccer-ball-support-or-team-in-a-huddle-for-motiv-2025-04-06-09-28-39-utc_buaqs9.jpg"
             alt="football team players help around a ball"
             className='w-full h-full object-cover'
           />
 
-          <div className="absolute inset-0 bg-black/40"></div>
-          <div className='absolute inset-0 flex flex-col justify-center items-center text-center text-white px-4 sm:px-6 gap-6'>
-            <p className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold'>Spass eu habben</p>
+          <div className="absolute inset-0 bg-black/40 "></div>
+          <div className='absolute inset-0 flex flex-col justify-center items-center text-center text-white px-4 sm:px-6 gap-6 '>
+            <p className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold'>Spass eu haben</p>
 
             <Link
               to="/register"
@@ -34,7 +35,7 @@ function Index() {
       </section>
 
       {/* ABOUT SECTION */}
-      <div className="flex flex-col md:flex-row items-stretch bg-white rounded-lg shadow-lg overflow-hidden mx-4 sm:mx-6 md:mx-8 lg:mx-12 my-8 sm:my-10 md:my-12">
+      <div className="flex flex-col md:flex-row items-stretch bg-white  shadow-lg overflow-hidden mx-4 sm:mx-6 md:mx-8 lg:mx-12 lg:h-90 my-8 sm:my-10 md:my-12">
 
         <div className="w-full md:w-1/2 p-6 sm:p-8 md:p-10 lg:p-12 flex flex-col justify-center">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">Damba SV Freiburg e.V.</h2>
@@ -57,9 +58,53 @@ function Index() {
         </div>
       </div>
 
+      <h1 className='font-bold items-center justify-center text-center text-2xl'>ACTUALITES DU CLUB</h1>
+     
+    {/* test section */}
+    <div className="mx-4 mb-4 lg:mx-12">
+  <div className="flex w-full h-100 overflow-hidden bg-green-500">
+
+    {/* Image gauche */}
+    <img
+      src="https://res.cloudinary.com/dc4gctzct/image/upload/v1768474203/sports-winning-and-team-on-field-for-celebration-2026-01-09-10-22-17-utc_fkoaaj.jpg"
+      className="w-1/3 h-full object-cover transition-transform duration-300 ease-in-out hover:scale-110"
+      style={{
+        clipPath: "polygon(0 0, 100% 0, 90% 100%, 0% 100%)"
+      }}
+    />
+
+    {/* Image droite */}
+    <img
+      src="https://res.cloudinary.com/dc4gctzct/image/upload/v1769174411/professional-football-kicking-ball-in-soccer-stadi-2026-01-07-23-58-00-utc_a3472t.jpg"
+      className="w-1/3 h-full object-cover -ml-[10%] transition-transform duration-300 ease-in hover:scale-110 "
+      style={{
+        clipPath: "polygon(10% 0, 100% 0, 100% 100%, 0 100%)"
+      }}
+    />
+
+     <img
+      src="https://res.cloudinary.com/dc4gctzct/image/upload/v1769177766/professional-football-kicking-ball-in-soccer-stadi-2026-01-07-23-55-14-utc_2_utepce.jpg"
+      className="w-1/3 h-full object-cover -ml-[10%] transition-transform duration-300 ease-in hover:scale-110 "
+      style={{
+        clipPath: "polygon(10% 0, 100% 0, 100% 100%, 0 100%)"
+      }}
+    />
+
+     <img
+      src="https://res.cloudinary.com/dc4gctzct/image/upload/v1769174775/caucasian-male-soccer-player-over-neon-pink-lighti-2026-01-09-08-40-28-utc_1_swyeke.jpg"
+      className="w-1/3 h-full object-cover -ml-[10%] transition-transform duration-300 ease-in hover:scale-110 "
+      style={{
+        clipPath: "polygon(10% 0, 100% 0, 100% 100%, 0 100%)"
+      }}
+    />
+
+  </div>
+</div>
+
+
       {/* STORE SECTION */}
-      <div className="w-full bg-green-500 text-white py-8 sm:py-10 md:py-12 lg:py-14 mt-8 sm:mt-10 md:mt-12">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+      <div className="bg-green-500 lg:mx-12 mx-4 py-4">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-2">
     <div className="flex flex-col lg:flex-row items-center justify-between gap-6 md:gap-8 lg:gap-12">
       
       {/* IMAGE */}

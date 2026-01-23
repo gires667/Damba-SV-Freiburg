@@ -9,16 +9,29 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TasseRouteImport } from './routes/tasse'
 import { Route as StoreRouteImport } from './routes/store'
+import { Route as SacRouteImport } from './routes/sac'
 import { Route as RegisterRouteImport } from './routes/register'
 import { Route as NewsRouteImport } from './routes/news'
+import { Route as FitRouteImport } from './routes/fit'
 import { Route as ConnexionRouteImport } from './routes/connexion'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 
+const TasseRoute = TasseRouteImport.update({
+  id: '/tasse',
+  path: '/tasse',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const StoreRoute = StoreRouteImport.update({
   id: '/store',
   path: '/store',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SacRoute = SacRouteImport.update({
+  id: '/sac',
+  path: '/sac',
   getParentRoute: () => rootRouteImport,
 } as any)
 const RegisterRoute = RegisterRouteImport.update({
@@ -29,6 +42,11 @@ const RegisterRoute = RegisterRouteImport.update({
 const NewsRoute = NewsRouteImport.update({
   id: '/news',
   path: '/news',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FitRoute = FitRouteImport.update({
+  id: '/fit',
+  path: '/fit',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ConnexionRoute = ConnexionRouteImport.update({
@@ -51,58 +69,105 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/connexion': typeof ConnexionRoute
+  '/fit': typeof FitRoute
   '/news': typeof NewsRoute
   '/register': typeof RegisterRoute
+  '/sac': typeof SacRoute
   '/store': typeof StoreRoute
+  '/tasse': typeof TasseRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/connexion': typeof ConnexionRoute
+  '/fit': typeof FitRoute
   '/news': typeof NewsRoute
   '/register': typeof RegisterRoute
+  '/sac': typeof SacRoute
   '/store': typeof StoreRoute
+  '/tasse': typeof TasseRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/connexion': typeof ConnexionRoute
+  '/fit': typeof FitRoute
   '/news': typeof NewsRoute
   '/register': typeof RegisterRoute
+  '/sac': typeof SacRoute
   '/store': typeof StoreRoute
+  '/tasse': typeof TasseRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/connexion' | '/news' | '/register' | '/store'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/connexion'
+    | '/fit'
+    | '/news'
+    | '/register'
+    | '/sac'
+    | '/store'
+    | '/tasse'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/connexion' | '/news' | '/register' | '/store'
+  to:
+    | '/'
+    | '/about'
+    | '/connexion'
+    | '/fit'
+    | '/news'
+    | '/register'
+    | '/sac'
+    | '/store'
+    | '/tasse'
   id:
     | '__root__'
     | '/'
     | '/about'
     | '/connexion'
+    | '/fit'
     | '/news'
     | '/register'
+    | '/sac'
     | '/store'
+    | '/tasse'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   ConnexionRoute: typeof ConnexionRoute
+  FitRoute: typeof FitRoute
   NewsRoute: typeof NewsRoute
   RegisterRoute: typeof RegisterRoute
+  SacRoute: typeof SacRoute
   StoreRoute: typeof StoreRoute
+  TasseRoute: typeof TasseRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/tasse': {
+      id: '/tasse'
+      path: '/tasse'
+      fullPath: '/tasse'
+      preLoaderRoute: typeof TasseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/store': {
       id: '/store'
       path: '/store'
       fullPath: '/store'
       preLoaderRoute: typeof StoreRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sac': {
+      id: '/sac'
+      path: '/sac'
+      fullPath: '/sac'
+      preLoaderRoute: typeof SacRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/register': {
@@ -117,6 +182,13 @@ declare module '@tanstack/react-router' {
       path: '/news'
       fullPath: '/news'
       preLoaderRoute: typeof NewsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fit': {
+      id: '/fit'
+      path: '/fit'
+      fullPath: '/fit'
+      preLoaderRoute: typeof FitRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/connexion': {
@@ -147,9 +219,12 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   ConnexionRoute: ConnexionRoute,
+  FitRoute: FitRoute,
   NewsRoute: NewsRoute,
   RegisterRoute: RegisterRoute,
+  SacRoute: SacRoute,
   StoreRoute: StoreRoute,
+  TasseRoute: TasseRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

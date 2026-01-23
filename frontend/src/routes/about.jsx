@@ -1,4 +1,4 @@
-import { createFileRoute } from '@tanstack/react-router'
+import { createFileRoute,Link } from '@tanstack/react-router'
 import { DE, FR, SN, ML, CI , CM } from "country-flag-icons/react/3x2";
 
 
@@ -41,7 +41,7 @@ function RouteComponent() {
             {/* LOGO */}
             <div className='flex-shrink-0'>
               <img 
-                src="https://res.cloudinary.com/dc4gctzct/image/upload/v1768474199/envato-labs-image-edit_3_hcp19q.png"
+                src="https://res.cloudinary.com/dc4gctzct/image/upload/v1768744912/01cc6632-b373-40e3-ba6a-018c903c4f3d_ky0oxh.jpg"
                 alt="logo of damba sv freiburg"
                 className='w-24 h-24 sm:w-40 sm:h-40 md:w-56 md:h-56 lg:w-64 lg:h-64 object-contain'
               />
@@ -58,8 +58,15 @@ function RouteComponent() {
               ou sponsoriser l'équipe, c'est participer à un projet humain qui 
               rassemble et redonne de l'espoir
             </p>
-
+               
           </div>
+
+          <Link
+              to="/register"
+              className='bg-white text-green-400 rounded-2xl shadow-lg p-2 m-2'
+              >Devenir membre
+              </Link>
+
         </div>
       </div>
 
